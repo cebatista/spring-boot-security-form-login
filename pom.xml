@@ -14,7 +14,7 @@
 	<name>FormLogin</name>
 	<description>FormLogin</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<!--<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
 		<thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
 		<thymeleaf-extras-springsecurity5version>3.0.0.RELEASE</thymeleaf-extras-springsecurity5version>  -->
