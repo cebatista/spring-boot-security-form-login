@@ -29,6 +29,18 @@ Esse exemplo está realizando login com pagina customizada e banco de dados, é 
   <scope>runtime</scope>
 </dependency>
 ```
+
+– or Sql Server:
+```xml
+<dependency>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+  <scope>runtime</scope>
+</dependency>
+```
+
+
+
 ## Configure Spring Datasource, JPA, App properties
 Open `src/main/resources/application.properties`
 - For PostgreSQL:
@@ -39,6 +51,20 @@ spring.datasource.password= 123
 
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
 spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+
+
+
+## Configure Spring Datasource, JPA, App properties
+Open `src/main/resources/application.properties`
+- For Sql Server:
+
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=importador;encrypt=true;trustServerCertificate=true
+spring.datasource.username= sa
+spring.datasource.password= 123
+
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect
+
 
 # Hibernate ddl auto (create, create-drop, validate, update)
 spring.jpa.hibernate.ddl-auto= update
